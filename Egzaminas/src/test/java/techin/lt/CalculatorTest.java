@@ -27,6 +27,7 @@ public class CalculatorTest extends BaseTest{
         action.inputSecondNumber("4");
         action.clickCalculate();
         log.info("Cleared the fields and Typed in numbers and clicked skaiciuoti");
+        Assertions.assertEquals("5 + 4 = 9", action.assertResult());
     }
     @Test
     void calculationNegative(){
