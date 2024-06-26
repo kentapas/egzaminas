@@ -36,6 +36,8 @@ public class Page extends Base{
     WebElement secondNumber;
     @FindBy(css = "[type='submit']")
     WebElement calculate;
+    @FindBy(css = "h4")
+    WebElement result;
     @FindBy(css = "#sk1\\.errors")
     WebElement numberError;
     @FindBy(css = "[href='\\/skaiciai']")
@@ -80,6 +82,9 @@ public class Page extends Base{
     }
     public void clickCalculate(){
         calculate.click();
+    }
+    public String assertResult(){
+        return result.getText();
     }
     public void clearFirstNumber(){
         firstNumber.clear();
